@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, TextInput, StyleSheet } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+// import { Feather } from '@expo/vector-icons';
 
 const SearchBar = ({ term, onTermChange, onTermSubmited}) => {
     return(
         <View style={styles.backgroundStyle}>
-            <Feather style={styles.iconStyle}
+            {/* <Feather style={styles.iconStyle}
             name="search"
-            />
+            /> */}
             <TextInput 
             style={styles.InputTextStyle}
             placeholder="Search Bar"

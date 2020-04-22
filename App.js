@@ -1,3 +1,4 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import SearchScreen from './food_src/Screens/SearchScreen';
@@ -12,11 +13,17 @@ const navigator = createStackNavigator ({
 {
     initialRouteName: 'WelcomeScreen',
     defaultNavigationOptions: {
-        header : null
+        headerShown: false
     }
 }
 
 );
 
+const AppContainer = createAppContainer(navigator);
 
-export default createAppContainer(navigator);
+
+export default class App extends React.Component {
+    render() {
+      return <AppContainer />;
+    }
+  }
