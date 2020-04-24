@@ -9,20 +9,20 @@ const ResultShowResult = ({ navigation }) => {
     const [result, setResult] = useState(null);
     const id = navigation.getParam('id');
 
-    console.log(result);
+ 
 
     const getResult = async id => {
         const response = await yelp.get(`/${id}`);
         setResult(response.data);     
     };
-    
+    console.log(result);
   
     return(
         <View style={{ marginTop: 40, alignItems: 'center'}}>
             <Text>
-                heelllo
-                </Text>
-            </View>
+                Search Disply Screen
+            </Text>
+        </View>
 
     );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, TextInput, StyleSheet } from 'react-native';
 // import { Feather } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SearchBar = ({ term, onTermChange, onTermSubmited}) => {
     return(
@@ -8,6 +9,8 @@ const SearchBar = ({ term, onTermChange, onTermSubmited}) => {
             {/* <Feather style={styles.iconStyle}
             name="search"
             /> */}
+
+            <Icon name="search" style={styles.iconStyle}  />
             <TextInput 
             style={styles.InputTextStyle}
             placeholder="Search Bar"

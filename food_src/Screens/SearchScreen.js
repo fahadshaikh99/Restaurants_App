@@ -19,28 +19,28 @@ const SearchScreen = () => {
         
         <>
             <ScrollView style={{ marginTop: 20}}>
-            <SearchBar
-            term={term}
-            onTermChange={setTerm}     
-            onTermSubmited={() => SearchApi(term)}
-            />
-            {errorMessage ? <Text>{errorMessage}</Text> : null}
-           
-            <Text>
-                we have found {Results.length} results in our data
-            </Text>
-            <ResultsList
-            results ={FilterResultByPrice('$')}
-            title = "Cost Effective"
-            />
-            <ResultsList
-            results ={FilterResultByPrice('$$')}
-            title = "Bit Pricier"
-            />
-            <ResultsList
-            results ={FilterResultByPrice('$$$')}
-            title = "Big Spender"
-            />
+                <SearchBar
+                    term={term}
+                    onTermChange={setTerm}     
+                    onTermSubmited={() => SearchApi(term)}
+                />
+                {errorMessage ? <Text>{errorMessage}</Text> : null}
+            
+                <Text>
+                    we have found {Results.length} results in our data
+                </Text>
+                <ResultsList
+                    results ={FilterResultByPrice('$')}
+                    title = "Cost Effective"
+                />
+                <ResultsList
+                    results ={FilterResultByPrice('$$')}
+                    title = "Bit Pricier"
+                />
+                <ResultsList
+                    results ={FilterResultByPrice('$$$')}
+                    title = "Big Spender"
+                />
             </ScrollView>
         </>
     );
